@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-n4ff
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-n4ff
+    app.kubernetes.io/part-of: cin4s-839-0061-app
+  name: devfile-sample-n4ff
+spec:
+  ports:
+  - name: "3001"
+    port: 3001
+    targetPort: 3001
+  selector:
+    app.kubernetes.io/instance: devfile-sample-n4ff
+status:
+  loadBalancer: {}
